@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML Layout</title>
+    <style type="text/css">
+        /**Begin reset*/
+        * {
+            margin: 0;
+            padding: 0;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+
+        h1, h2, h3, h4, h5, h6, p {
+            margin-bottom: 10px;
+        }
+
+        ol, ul, dl {
+            list-style-position: inside;
+        }
+
+        /**End reset*/
+
+        /**Begin standard selectors*/
+        body {
+            font: 13px 'Trebuchet MS', 'Verdana', 'Helvetica', 'Arial', 'sans-serif';
+            color: #444;
+            background-color: #888;
+        }
+
+        #spa {
+            position: absolute;
+            top: 8px;
+            right: 8px;
+            bottom: 8px;
+            left: 8px;
+
+            min-height: 500px;
+            min-width: 500px;
+            overflow: hidden;
+
+            background-color: #fff;
+            border-radius: 0 8px 0 8px;
+        }
+
+        .cr-shell-head, .cr-shell-head-logo, .cr-shell-head-account, .cr-shell-head-search,
+        .cr-shell-main, .cr-shell-main-nav, .cr-shell-main-content,
+        .cr-shell-foot, .cr-shell-chat, .cr-shell-modal {
+            position: absolute;
+        }
+
+        .cr-shell-head {
+            top: 0;
+            right: 0;
+            left: 0;
+            height: 40px;
+        }
+
+        .cr-shell-head-logo {
+            width: 128px;
+            height: 32px;
+            top: 4px;
+            left: 4px;
+            background: orange;
+        }
+
+        .cr-shell-head-account {
+            width: 64px;
+            height: 32px;
+            top: 4px;
+            right: 0;
+            background: green;
+        }
+
+        .cr-shell-head-search {
+            width: 248px;
+            height: 32px;
+            top: 4px;
+            right: 64px;
+            background: blue;
+        }
+
+        .cr-shell-main {
+            top: 40px;
+            right: 0;
+            left: 0;
+            bottom: 40px;
+        }
+
+
+        .cr-shell-main-nav, .cr-shell-main-content {
+            top: 0;
+            bottom: 0;
+        }
+
+        .cr-shell-main-nav {
+            width: 250px;
+            left: 0;
+            right: 0;
+            background: #eee;
+        }
+
+        .cr-x-closed .cr-shell-main-nav {
+            width: 0;
+        }
+
+        .cr-shell-main-content {
+            left: 250px;
+            right: 0;
+            background: #ddd;
+        }
+
+        .cr-x-closed .cr-shell-main-content {
+            left: 0;
+        }
+
+        .cr-shell-foot {
+            right: 0;
+            bottom: 0;
+            left: 0;
+            height: 40px;
+            background: #444444;
+        }
+
+        .cr-shell-chat {
+            right: 0;
+            bottom: 0;
+            width: 300px;
+            height: 15px;
+            background: red;
+            z-index: 1;
+        }
+
+        .cr-shell-modal {
+            margin-top: -200px;
+            margin-left: -200px;
+            top: 50%;
+            left: 50%;
+            width: 400px;
+            height: 400px;
+            background: #fff;
+            border-radius: 3px;
+            z-index: 2;
+        }
+
+    </style>
+</head>
+<body>
+
+<div id="spa">
+    <!--页头 Begin-->
+    <header class="cr-shell-head">
+        <div class="cr-shell-head-logo">Logo</div>
+        <div class="cr-shell-head-account">Account</div>
+        <div class="cr-shell-head-search">Search</div>
+    </header>
+    <!--页头 End-->
+
+    <!--内容 Begin-->
+    <div class="cr-shell-main">
+        <div class="cr-shell-main-nav">Nav</div>
+        <div class="cr-shell-main-content">Content</div>
+    </div>
+    <!--内容 End-->
+
+    <!--页尾 Begin-->
+    <footer class="cr-shell-foot">
+        Foot
+    </footer>
+    <!--页尾 End-->
+
+    <!--聊天 Begin-->
+    <div class="cr-shell-chat">Chat</div>
+    <!--聊天 End-->
+
+    <!--模态对话框 Begin-->
+    <div class="cr-shell-modal">Modal</div>
+    <!--模态对话框 End-->
+</div>
+
+</body>
+</html>
