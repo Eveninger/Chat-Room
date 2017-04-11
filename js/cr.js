@@ -3,13 +3,10 @@
  */
 var cr = (function () {
     var initModule = function ($container) {
-        console.log($container);
-        $container.html(
-            '<h1 style="display:inline-block; margin: 25px">hello world<\h1>'
-        );
+        cr.shell.initModule($container);
     };
 
     return {
         initModule: initModule
     };
-})();
+}());

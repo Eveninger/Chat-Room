@@ -1,0 +1,104 @@
+.cr-shell-head, .cr-shell-head-logo, .cr-shell-head-account, .cr-shell-head-search,
+.cr-shell-main, .cr-shell-main-nav, .cr-shell-main-content,
+.cr-shell-foot, .cr-shell-chat, .cr-shell-modal {
+    position: absolute;
+}
+
+.cr-shell-head {
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 40px;
+}
+
+.cr-shell-head-logo {
+    width: 128px;
+    height: 32px;
+    top: 4px;
+    left: 4px;
+    background: orange;
+}
+
+.cr-shell-head-account {
+    width: 64px;
+    height: 32px;
+    top: 4px;
+    right: 0;
+    background: green;
+}
+
+.cr-shell-head-search {
+    width: 248px;
+    height: 32px;
+    top: 4px;
+    right: 64px;
+    background: blue;
+}
+
+.cr-shell-main {
+    top: 40px;
+    right: 0;
+    left: 0;
+    bottom: 40px;
+}
+
+.cr-shell-main-nav, .cr-shell-main-content {
+    top: 0;
+    bottom: 0;
+}
+
+.cr-shell-main-nav {
+    width: 250px;
+    left: 0;
+    right: 0;
+    background: #eee;
+}
+
+.cr-x-closed .cr-shell-main-nav {
+    width: 0;
+}
+
+.cr-shell-main-content {
+    left: 250px;
+    right: 0;
+    background: #ddd;
+}
+
+.cr-x-closed .cr-shell-main-content {
+    left: 0;
+}
+
+.cr-shell-foot {
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 40px;
+    background: #444444;
+}
+
+.cr-shell-chat {
+    right: 0;
+    bottom: 0;
+    width: 300px;
+    height: 15px;
+    background: red;
+    z-index: 1;
+    cursor: pointer;
+    border-radius: 5px 0 0 0;
+}
+
+.cr-shell-chat:hover {
+    background: #a00;
+}
+
+.cr-shell-modal {
+    margin-top: -200px;
+    margin-left: -200px;
+    top: 50%;
+    left: 50%;
+    width: 400px;
+    height: 400px;
+    background: #fff;
+    border-radius: 3px;
+    z-index: 2;
+}
